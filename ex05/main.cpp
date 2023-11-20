@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 14:23:46 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/11/20 14:23:47 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/11/20 18:38:43 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/11/20 21:58:48 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include <string>
+#include "Harl.hpp"
 
-Zombie::Zombie(std::string _name) : name(_name)
+int main(int argc, char** argv)
 {
-	;
-}
+	if (argc != 2)
+	{
+		std::cout << "Wrong number of parameter\n";
+		return 1;
+	}
 
-Zombie::~Zombie(void)
-{
-	std::cout << name << " destroyed\n";
-}
+	Harl harl2;
 
-void Zombie::announce(void)
-{
-	std::cout << name << ": BraiiiiiiinnnzzzZ...\n";
+	harl2.complain(std::string(argv[1]));
 }

@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 14:23:46 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/11/20 14:23:47 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/11/20 17:53:43 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/11/20 18:28:03 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-Zombie::Zombie(std::string _name) : name(_name)
+HumanB::HumanB(std::string _name) : name(_name), wp(0)
 {
 	;
 }
 
-Zombie::~Zombie(void)
+void HumanB::setWeapon(Weapon& _wp)
 {
-	std::cout << name << " destroyed\n";
+	wp = &_wp;
 }
 
-void Zombie::announce(void)
+void HumanB::attack()
 {
-	std::cout << name << ": BraiiiiiiinnnzzzZ...\n";
+	std::cout << name << " attacks with their " << wp->getType() << '\n';
 }

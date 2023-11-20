@@ -6,14 +6,11 @@
 #    By: hyungdki <hyungdki@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/03 20:30:42 by hyungdki          #+#    #+#              #
-#    Updated: 2023/11/20 14:33:45 by hyungdki         ###   ########.fr        #
+#    Updated: 2023/11/20 20:20:28 by hyungdki         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS =	main.cpp \
-		Zombie.cpp \
-		newZombie.cpp \
-		randomChump.cpp
+SRCS =	main.cpp
 
 OBJS = 	${SRCS:.cpp=.o}
 
@@ -23,7 +20,7 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = zombie
+NAME = replace
 
 ${NAME} : ${TOTAL_OBJS}
 	${CC} ${CFLAGS} ${TOTAL_OBJS} -o $@

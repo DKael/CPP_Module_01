@@ -5,27 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 13:58:04 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/11/20 16:28:02 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/11/20 17:15:19 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/11/20 17:45:08 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
 
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
-
-int main(void)
+int main()
 {
-	Zombie monster00("monster00");
+	std::string str("HI THIS IS BRAIN");
+	std::string* stringPTR = &str;
+	std::string& stringREF = str;
 
-	monster00.announce();
-	//-------------------------------------------------
-	Zombie* monster01 = newZombie("monster01");
+	std::cout << "memory address of the str : " << &str << '\n';
+	std::cout << "memory address held by stringPTR : " << stringPTR << '\n';
+	std::cout << "memory address held by stringREF : " << &stringREF << '\n';
 
-	monster01->announce();
-	delete monster01;
-
-	//-------------------------------------------------
-	randomChump("monster02");
+	std::cout << "value of str : " << str << '\n';
+	std::cout << "value pointed to by stringPTR : " << *stringPTR << '\n';
+	std::cout << "value pointed to by stringREF : " << stringREF << '\n';
 }

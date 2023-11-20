@@ -6,26 +6,37 @@
 /*   By: hyungdki <hyungdki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:58:04 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/11/20 16:28:02 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/11/20 17:12:33 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
+#include <string>
 #include "Zombie.hpp"
 
-Zombie* newZombie( std::string name );
-void randomChump( std::string name );
+Zombie *zombieHorde(int N, std::string name);
 
-int main(void)
+int main(int argc, char **argv)
 {
-	Zombie monster00("monster00");
+	if (argc != 3)
+	{
+		std::cout << "only number of zombies and name of zombie accepted\n";
+		return 1;
+	}
+	if (std::string(argv[1]).find_first_not_of("0123456789") != std::string::npos)
+	{
+		std::cout << "first input have to be a positive number\n";
+		return 1;
+	}
+	
+	int number = atoi(argv[1]);
+	std::string zombie_name(argv[2]);
 
-	monster00.announce();
-	//-------------------------------------------------
-	Zombie* monster01 = newZombie("monster01");
+	Zombie *horde;
+	horde = zombieHorde(number, zombie_name);
 
-	monster01->announce();
-	delete monster01;
+	for (int i = 0; i < number; i++)
+		horde[i].announce();
 
-	//-------------------------------------------------
-	randomChump("monster02");
+	delete[] horde;
 }

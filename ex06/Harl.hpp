@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyungdki <hyungdki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 14:23:46 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/11/20 14:23:47 by hyungdki         ###   ########.fr       */
+/*   Created: 2023/11/20 21:29:59 by hyungdki          #+#    #+#             */
+/*   Updated: 2023/11/20 22:07:40 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-Zombie::Zombie(std::string _name) : name(_name)
-{
-	;
-}
+# include <string>
+# include <iostream>
 
-Zombie::~Zombie(void)
-{
-	std::cout << name << " destroyed\n";
-}
+# ifndef LIST_SIZE
+#  define LIST_SIZE 4
+# endif
 
-void Zombie::announce(void)
+class Harl
 {
-	std::cout << name << ": BraiiiiiiinnnzzzZ...\n";
-}
+private:
+	
+	void (Harl::*func_ptr[LIST_SIZE])(void);
+
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
+
+public:
+	Harl();
+	void complain(std::string level);
+};
+
+#endif
