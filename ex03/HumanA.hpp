@@ -6,7 +6,7 @@
 /*   By: hyungdki <hyungdki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 17:53:45 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/11/20 18:31:05 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/11/29 16:37:28 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 class HumanA
 {
 private:
+	HumanA();
+	
 	std::string name;
 	Weapon& wp;
 
