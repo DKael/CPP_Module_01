@@ -6,7 +6,7 @@
 /*   By: hyungdki <hyungdki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 18:38:43 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/11/20 20:54:21 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/11/30 19:44:11 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int main(int argc, char** argv)
 	std::ofstream fout;
 	std::string contents;
 
-	fin.open(std::string(argv[1]));
+	fin.open(argv[1]);
 	if (fin.is_open() == false)
 	{
 		std::cout << "File open error!\n";
@@ -50,7 +50,7 @@ int main(int argc, char** argv)
 		idx = f_idx + s2.length();
 	}
 
-	fout.open(std::string(argv[1]) + std::string(".replace"));
+	fout.open((std::string(argv[1]) + std::string(".replace")).c_str());
 	if (fout.is_open() == false)
 	{
 		std::cout << "File open error!\n";

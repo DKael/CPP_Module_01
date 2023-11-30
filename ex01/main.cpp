@@ -6,12 +6,13 @@
 /*   By: hyungdki <hyungdki@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 13:58:04 by hyungdki          #+#    #+#             */
-/*   Updated: 2023/11/20 17:12:33 by hyungdki         ###   ########.fr       */
+/*   Updated: 2023/11/30 19:42:06 by hyungdki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
+#include <cstdlib>
 #include "Zombie.hpp"
 
 Zombie *zombieHorde(int N, std::string name);
