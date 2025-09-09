@@ -18,35 +18,35 @@ CPP Module 01은 C++의 메모리 할당(new/delete), 참조(Reference)와 포�
 ## 3️⃣ Exercise별 구현 사항
 
 ### ex00 — BraiiiiiiinnnzzzZ
-	•	Zombie 클래스, newZombie()(힙 생성) / randomChump()(스택 생성) 구현
-	•	스택 vs 힙 객체 생성 방식과 수명 차이 확인(스택 자동 소멸, 힙 수동 삭제)
+* Zombie 클래스, newZombie()(힙 생성) / randomChump()(스택 생성) 구현
+* 스택 vs 힙 객체 생성 방식과 수명 차이 확인(스택 자동 소멸, 힙 수동 삭제)
 
 ### ex01 — Moar brainz!
-	•	zombieHorde(N, name)로 동적 배열 생성, delete[]로 해제
-	•	반복 초기화/반복 announce 로직
+* zombieHorde(N, name)로 동적 배열 생성, delete[]로 해제
+* 반복 초기화/반복 announce 로직
 
 ### ex02 — HI THIS IS BRAIN
-	•	문자열의 주소/값을 포인터와 참조로 각각 출력
-	•	포인터의 재할당 가능성과 참조의 초기화·불변 바인딩 대비
+* 문자열의 주소/값을 포인터와 참조로 각각 출력
+* 포인터의 재할당 가능성과 참조의 초기화·불변 바인딩 대비
 
 ### ex03 — Weapon/HumanA/HumanB
-	•	Weapon(mutable type), HumanA(Weapon&), HumanB(Weapon*)
-	•	HumanA는 레퍼런스로 항상 무기를 가진 상태여야 함(널/디폴트 불가)
-	•	HumanB는 포인터로 무기 부재/교체를 표현
-	•	Weapon::setType()이 공유 참조를 통해 즉시 반영되는 동작 확인
+* Weapon(mutable type), HumanA(Weapon&), HumanB(Weapon*)
+* HumanA는 레퍼런스로 항상 무기를 가진 상태여야 함(널/디폴트 불가)
+* HumanB는 포인터로 무기 부재/교체를 표현
+* Weapon::setType()이 공유 참조를 통해 즉시 반영되는 동작 확인
 
 ### ex04 — Sed is for losers
-	•	입력 파일에서 문자열 s1을 s2로 치환하여 <filename>.replace 출력
-	•	중첩/자기치환 방지: 매칭 후 인덱스를 s1 길이만큼 전진
-	•	s1이 빈 문자열인 경우 예외 처리(무한 루프 방지)
+* 입력 파일에서 문자열 s1을 s2로 치환하여 <filename>.replace 출력
+* 중첩/자기치환 방지: 매칭 후 인덱스를 s1 길이만큼 전진
+* s1이 빈 문자열인 경우 예외 처리(무한 루프 방지)
 
 ### ex05 — Harl 2.0
-	•	문자열 레벨(DEBUG/INFO/WARNING/ERROR) → 멤버 함수 포인터 배열로 매핑
-	•	입력 레벨에 해당하는 멤버 함수를 호출
+* 문자열 레벨(DEBUG/INFO/WARNING/ERROR) → 멤버 함수 포인터 배열로 매핑
+* 입력 레벨에 해당하는 멤버 함수를 호출
 
 ### ex06 — Harl filter
-	•	입력 레벨 이상만 출력하도록 필터링
-	•	레벨 우선순위 테이블과 롱기스트-매치가 아닌 단순 등급 비교 설계
+* 입력 레벨 이상만 출력하도록 필터링
+* 레벨 우선순위 테이블과 롱기스트-매치가 아닌 단순 등급 비교 설계
 
 ---
 
